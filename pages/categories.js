@@ -59,7 +59,7 @@ export default function Categories() {
 
                 </option>
                 {categories.length>0 && categories.map(category=>(
-                            <option value={category._id}>{category.name}</option>
+                            <option value={category._id} key={category._id}>{category.name}</option>
                         ))}
             </select>
                 <button className="bg-blue-900 text-white rounded-md py-1 px-2">save</button>
@@ -78,7 +78,7 @@ export default function Categories() {
                 </thead>
                 <tbody>
                         {categories.length>0 && categories.map(category=>(
-                            <tr>
+                            <tr key={category._id}>
                                 <td>{category.name}</td>
                                 <td>{category?.parent?.name}</td>
                                 <td>
